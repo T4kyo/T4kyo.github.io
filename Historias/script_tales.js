@@ -3,7 +3,7 @@ var dados_usuario = {
     nome: sessionStorage.getItem('Nome'),
     senha: sessionStorage.getItem('Senha'),
     tema_atual: sessionStorage.getItem('Tema'),
-    perfil_foto: sessionStorage.getItem('userfoto')
+    perfil_foto: sessionStorage.getItem('userfoto'),
     cadastro: sessionStorage.getItem('Cadastramento')
 }
 
