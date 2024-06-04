@@ -4,6 +4,7 @@ var dados_usuario = {
     senha: sessionStorage.getItem('Senha'),
     tema_atual: sessionStorage.getItem('Tema'),
     perfil_foto: sessionStorage.getItem('userfoto')
+    cadastro: sessionStorage.getItem('Cadastramento')
 }
 
 var dados_pagina = {
@@ -62,6 +63,13 @@ window.onload = function (event) {
         document.querySelector('#imgSearchSrc').src = (sessionStorage.getItem('imgSearchSrc'));
         document.querySelector('#imgLogoSrc').src = (sessionStorage.getItem('imgLogoSrc'));
     }
+}
+
+    if (dados_usuario.cadastro == "1"){ document.getElementById('dropthemes').classList.toggle('show');    
+} 
+    else {        
+           ShowPopup();    
+         }
 }
 
 //Funções:
