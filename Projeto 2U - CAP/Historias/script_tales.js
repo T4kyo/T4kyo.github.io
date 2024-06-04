@@ -65,13 +65,6 @@ window.onload = function (event) {
     }
 }
 
-    if (dados_usuario.cadastro == "1"){ document.getElementById('dropthemes').classList.toggle('show');    
-} 
-    else {        
-           ShowPopup();    
-         }
-}
-
 //Funções:
 //Função responsavel por tonar o menu suspenso visivel, através da atribuição da classe (.show)
 function ShowThemes() {
