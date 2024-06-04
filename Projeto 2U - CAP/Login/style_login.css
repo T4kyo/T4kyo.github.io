@@ -1,0 +1,477 @@
+/* Link para importar a fonte Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Variávies CSS */
+:root {
+    /* Fonte */
+    --fonte1: 'poppins', 'Segoe UI', 'sans-serif', 'Arial';
+    
+    /* Cores padrão*/
+    
+    /* Clássico - Claro */
+
+    /* Bg do body */
+    --body-bg: #b8b8b8;
+    /* Degradê para o bg do footer */
+    --body-bg2: #bdbdbd;
+    /* Background das telas */
+    --body-bg3: #f1f1f1;
+
+    /* Cor do texto do body */
+    --body-color: #181818;
+
+    /* Cor para o bg dos titulos */
+    --titulo-bg: #111111;
+
+    
+    /* Cor da borda dos inputs */
+    --input-color: #161616;
+    /* Cor para o texto dos inputs */
+    --input-color2:#202020;
+    /* Cor do textarea */
+    --text-color: #a5a5a5;
+
+    /* Cor para as labels */
+    --label-color: #111111;
+    /* Cor para as labels focadas */
+    --label-color2: #217ace;
+
+    /* Cor para os botões */
+    --button-color: #161616;
+
+    /* Cor do href */
+    --forget-color: #255ea8;
+
+    --copyright-color: #424242ce;
+
+    /* Cor para a barra de navegação */
+    --nav-bg: #d4d4d4;
+    /* Sombra para a barra de navegação */
+    --nav-shadow: #f1f1f1;
+
+    /* Sombra das estrelas de avaliação */
+    --stars-shadow: #202020;
+
+    /* Sombra para os footer */
+    --shadow2: #4343433e;
+
+}
+
+/* Cores para os temas */
+/* Temas escuros */
+
+/* Clássico - Escuro */
+.dark-theme:root {
+    /* Bg do body */
+    --body-bg: #0c0c0c;
+    /* Degradê para o bg do footer */
+    --body-bg2: #272727;
+    /* Background das telas */
+    --body-bg3: #1a1a1a;
+
+    /* Cor do texto do body */
+    --body-color: #e2e2e2;
+    
+    /* Cor para o bg dos titulos */
+    --titulo-bg: #cecece;
+
+    /* Cor da borda dos inputs */
+    --input-color: #e0e0e0;
+    /* Cor para o texto dos inputs */
+    --input-color2: #e2e2e2;
+    /* Cor do textarea */
+    --text-color: #494949;
+    
+    /* Cor para as labels */
+    --label-color: #d4d4d4;
+    /* Cor para as labels focadas */
+    --label-color2: #217ace;
+
+    /* Cor para os botões */
+    --button-color: #f3f3f3;
+
+    /* Cor do href */
+    --forget-color: #255ea8;
+
+    --copyright-color: #b6b6b6e8;
+
+    /* Cor para a barra de navegação */
+    --nav-bg: #242424;
+    /* Sombra para a barra de navegação */
+    --nav-shadow: #505050;
+
+    /* Sombra das estrelas de avaliação */
+    --stars-shadow: #000000;
+
+    /* Sombra para os footer */
+    --shadow: #94949456;
+}
+
+/* Aplicado a todos os componentes */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte1);
+}
+
+/* Aplicado ao body */
+body {
+    background-color: var(--body-bg);
+    color: var(--body-color);
+    transition: .5s
+}
+
+/* Header */
+
+/* Barra de navegação */
+.btn {
+    height: 4.5em;
+    width: 100%;
+    background-color: var(--nav-bg);
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 60px 0px 60px;
+    box-shadow: 3px 3px 14px var(--nav-shadow);
+    gap: 22px;
+    align-items: center;
+    color: var(--body-color);
+    transition: .6s;
+}
+
+/* img#logo (manipula a imagem com id "logo" - logo do site) */
+.btn img#imgLogoSrc {
+    position: absolute;
+    width: 125px;
+    height: 120px;
+    top: 15px;
+    left: 60px;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--body-color);
+}
+
+/* Div responsável por manter o menu suspenso em uma unica posição. */
+.dropdown_menu {
+    position: relative;
+    display: inline-block;
+    gap: 30px;
+}
+
+.dropdown_menu > .themes:hover {
+    cursor: pointer;
+}
+
+/* Div responsável pelo conteúdo */
+.dropdown_content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 14px var(--nav-shadow);
+    z-index: 1;
+    width: 250px;
+    height: 75px;
+    background-color: var(--body-bg);
+    transform: translate(-67%,10%);
+}
+
+/* Botões que representam cada tema */
+.dropdown_content button {
+    color: var(--body-color);
+    border-radius: 30px;
+    padding: 12px 16px;
+    display: block;
+    font-size: 16px;
+    background: transparent;
+    
+}
+
+.dropdown_content button:hover {
+    color: var(--input-color2);
+    background-color: var(--body-bg3);
+}
+
+/* Classe que será atribuida quando o menu for ativado */
+.show {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Aplicaado para todos os botões */
+button {
+    padding: 0;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: var(--body-color);
+}
+
+/* Quando o cursor passar por cima, mudará para "pointer" */
+button:hover {
+    cursor: pointer;
+}
+
+/* Main */
+/* container do login */
+.container{
+    width: 99vw;
+    height: 50vw;
+    display: flex;
+    margin-top: 1%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container h1{
+    text-align: center;
+    font-size: 40px;
+    margin: 50px 0 30px 0;
+    color: var(--titulo-bg);
+}
+
+.container > .screen{
+    width: 500px;
+    height: 600px;
+    background-color: var(--body-bg3);
+    color: var(--card-color2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    transition: .5s;
+}
+
+
+/* Ajusta a imagem sem distorcer */
+#perfilimg {
+    object-fit: cover;
+}
+
+.screen > .inputs{
+    height: 85px;
+    width: 400px;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs input{
+    height: 50px;
+    width: 300px;
+    padding-top: 20px;
+    outline: none;
+    border: none;
+    text-align: center;
+    border-bottom: 2px solid var(--input-color);
+    color: var(--input-color2);
+    background: transparent;
+    margin: 0px 0px 0px 10%;
+    gap: 10%;
+}
+.inputs > label{
+    position: absolute;
+    top: 20%;
+    left: 13%;
+    padding: 10px 0;
+    color: var(--label-color);
+    font-size: 15px;
+    transition: .5s;
+}
+
+.inputs input:focus~label {
+    top: 5%;
+    color: var(--label-color2);
+    font-size: 13px;
+}
+
+.inputs input:valid~label {
+    top: 5%;
+    font-size: 12px;
+}
+
+.access{
+    width: 100%;
+    margin-top: 4%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.access > .remember{
+    width: 50%;
+    display: flex;
+    color: var(--input-color);
+    gap: 2%;
+}
+
+.senha{
+    color: var(--forget-color);
+}
+
+.botoes {
+    height: 50px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.botoes button{
+    color: var(--button-color);
+}
+
+#perfilimg {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid var(--button-color);
+}
+
+/*Div da imagem de perfil:*/
+#imgselector {
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    align-items: center;
+}
+
+#btnimg:hover {
+    border-radius: 10px;
+    padding: 3px;
+    color: var(--text-color);
+    background-color: var(--button-color);
+}
+
+
+/* container de comentarios */
+.container2{
+    height: 40vw;
+    width: 99vw;
+    margin-bottom: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.commits{
+    width: 400px;
+    height: 420px;
+    background-color: var(--body-bg3);
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6%;
+    border-radius: 30px;
+}
+
+.commits h2{
+    color: var(--titulo-bg);
+}
+
+.commits textarea{
+    height: 100px;
+    width:  300px;
+    resize: none;
+    background-color: var(--text-color);
+    color: var(--input-color);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: start;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+.commits label{
+    color: var(--label-color);
+}
+
+.commits button{
+    color: var(--button-color);
+}
+
+/* Área do ranking das estrelas */
+.rating{
+    display: flex;
+    transform:  rotateY(180deg);
+}
+  
+.rating input{
+    display: none;
+}
+  
+  .rating label{
+    display: block;
+    cursor: pointer;
+}
+  
+.rating label:before{
+    content: '\2606';
+    position: absolute;
+    display: block;
+    font-size: 50px;
+}
+  
+  .rating label:after{
+    content: '\2605';
+    display: block;
+    position: relative;
+    font-size: 50px;
+    color: #f8f529;
+    opacity: 0;
+    transition: 0.5s;
+    text-shadow: 2px 4px 5px var( --stars-shadow);
+}
+
+  .rating label:hover:after,
+  .rating label:hover ~ label:after,
+  .rating input:checked ~ label:after{
+    opacity: 1;
+}
+
+/*Imagem de perfil e derivados:*/
+#arquive  {
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+}
+
+/* Footer */
+
+/* Barra inferior com notas sobre o projeto */
+.notes {
+    height: 7em;
+    width: 100%;
+    background-image: linear-gradient(90deg, var(--nav-bg), var(--body-bg2));
+    padding: 0px 60px 0px 60px;
+    box-shadow: 3px 3px 20px var(--shadow);
+    gap: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--body-color);
+    gap: 6px;
+    text-align: center;
+}
+
+/* Description (descrição das notas) */
+.notes > .description {
+    font-size: 14px;
+}
+
+/* Copyright */
+.notes > .description > .copyright {
+    font-size: 13px;
+    color: var(--copyright-color);
+}

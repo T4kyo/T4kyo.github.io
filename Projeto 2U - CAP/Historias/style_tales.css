@@ -1,0 +1,871 @@
+
+/* Link para importar a fonte Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Variávies CSS */
+:root {
+    /* Fonte */
+    --fonte1: 'poppins', 'Segoe UI', 'sans-serif', 'Arial';
+    
+    /* Cores padrão*/
+    
+    /* Clássico - Claro */
+    --body-bg: #fafafa;
+    --body-bg2: #dddddd;
+    --body-bg3: #565656;
+    --body-bg4: #6b6b6b;
+
+    --filter-bg: #fafafa;
+    --filter-bg2:#e8e8e8;
+
+    --icon-bg: #c1c1c1;
+
+    --body-color: #7e7e7e;
+    --card-color2: #555;
+    --icon-color: #555;
+
+    --copyright-color: #555555a4;
+
+    --nav-bg: #e1e1e1;
+    --nav-shadow: #dcdcdc;
+
+    --span-bg: #d6d6d6;
+
+    --shadow: #434343;
+    --shadow2: #4343435e;
+}
+
+/* Cores para os temas */
+/* Temas escuros */
+
+/* Clássico - Escuro */
+.dark-theme:root {
+    --body-bg: #0c0c0c;
+    --body-bg2: #272727;
+    --body-bg3: #4e4e4e;
+    --body-bg4: #818181;
+
+    --filter-bg: #242424;
+    --filter-bg2:#131313;
+
+    --icon-bg: #494949;
+
+    --body-color: #a7a7a7;
+    --card-color2: #c0c0c0;
+    --icon-color: #f3f3f3;
+
+    --copyright-color: #b9b9b9a4;
+
+    --nav-bg: #242424;
+    --nav-shadow: #505050;
+
+    --span-bg: #3d3d3d;
+
+    --shadow: #79797969;
+    --shadow2: #94949456;
+}
+
+/* Flamingo - Escuro */
+.flamingo-darktheme:root {
+    /* Bg do body */
+    --body-bg: #240201;
+    /* Degradê para o bg do footer */
+    --body-bg2: #1b0101;
+    /* Cor para o bg do .info */
+    --body-bg3: #f0807f;
+    /* Cor para o bg do .profile */
+    --body-bg4: #ee9290;
+    
+    /* Cores para o desvanescimento do filter */
+    --filter-bg: #f9ad9d;
+    --filter-bg2:#f0807f;
+
+    /* Cor para o bg do ícone do card */
+    --icon-bg: #240201;
+    
+    /* Cor para o texto do body */
+    --body-color: #c66161;
+    /* Cor para o texto do card */
+    --card-color2: #c66161;
+    /* Cor para o número do card */
+    --icon-color: #240201;
+
+    --copyright-color: #83403b;
+
+    /* Cor para a barra de navegação */
+    --nav-bg: #490b0b;
+    /* Sombra para a barra de navegação */
+    --nav-shadow: #ab5050;
+
+    /* Cor para o background do span (card) */
+    --span-bg: #2402019e;
+
+    /* Sombra para o card .profile */
+    --shadow: #ab5050;
+    /* Sombra para os cards e footer */
+    --shadow2: #d57878;
+}
+
+/* Ensolarado - Escuro */
+.ensolarado-darktheme:root {
+    --body-bg: #120C07;
+    --body-bg2: #ad5d0c;
+    --body-bg3: #8b4f1e;
+    --body-bg4: #bb5d00;
+
+    --filter-bg: #120C07;
+    --filter-bg2: #663000;
+
+    --icon-bg: #361b02;
+
+    --body-color: #db843d;
+    --card-color2: #b16221;
+    --icon-color: #b16221;
+
+    --copyright-color: #ac631f;
+
+    --nav-bg: #2c1702;
+    --nav-shadow: #582701;
+
+    --span-bg: #522c06cc;
+
+    --shadow: #757575;
+    --shadow2: #582701;
+}
+
+/* Marino - Escuro */
+.marino-darktheme:root {
+    --body-bg: #070912;
+    --body-bg2: #0c75ad;
+    --body-bg3: #0a3a74;
+    --body-bg4: #1a2073;
+
+    --filter-bg: #070712;
+    --filter-bg2: #070812;
+
+    --icon-bg: #0c0236;
+
+    --body-color: #3d9fdb;
+    --card-color2: #21b18b;
+    --icon-color: #213eb1;
+
+    --copyright-color: #3d9fdb8a;
+
+    --nav-bg: #0f022c;
+    --nav-shadow: #011258;
+
+    --span-bg: #013a897c;
+
+    --shadow: #64746b;
+    --shadow2: #170158;
+}
+
+/* Temas claros */
+
+/* Flamingo - Claro */
+.flamingo-lighttheme:root {
+    --body-bg: #FEDDDC;
+    --body-bg2: #edcbca;
+    --body-bg3: #80110F;
+    --body-bg4: #a63533;
+
+    --filter-bg: #E5B4B3;
+    --filter-bg2: #d39897;
+
+    --icon-bg: #bc5656;
+
+    --body-color: #80110F;
+    --card-color2: #80110F;
+    --icon-color: #FEDDDC;
+
+    --copyright-color: #83403b;
+
+    --nav-bg: #f0b8b7;
+    --nav-shadow: #e68686;
+
+    --span-bg: #a9c8f387;
+
+    --shadow: #4d100f;
+    --shadow2: #bc5656;
+}
+
+/* Ensolarado - Claro */
+.ensolarado-lighttheme:root {
+    --body-bg: #dbaa7f;
+    --body-bg2: #fc8914;
+    --body-bg3: #b4691e;
+    --body-bg4: #492101;
+    
+    --filter-bg: #f3c58f;
+    --filter-bg2:#a85201;
+
+    --icon-bg: #ffbd7b;
+    
+    --body-color: #532c00;
+    --card-color2: #55290f;
+    --icon-color: #ca8e49;
+
+    --copyright-color: #743807;
+
+    --nav-bg: #d88c4e;
+    --nav-shadow: #6b3600;
+
+    --span-bg: #ad590681;
+    
+    --shadow: #793003;
+    --shadow2: #75380a;
+} 
+
+/* Marino - Claro */
+.marino-lighttheme:root {
+    --body-bg: #7fdbd3;
+    --body-bg2: #14d1fc;
+    --body-bg3: #22a5c5;
+    --body-bg4: #1b3e85;
+    
+    --filter-bg: #8ff3dc;
+    --filter-bg2:#011aa8;
+    
+    --icon-bg: #63b1e1;
+
+    --body-color: #1b3e85;
+    --card-color2: #00176b;
+    --icon-color: #00176b;
+
+    --copyright-color: #220774a7;
+    
+    --nav-bg: #4ea3d8;
+    --nav-shadow: #00176b;
+
+    --span-bg: #1c62c497;
+    
+    --shadow: #0f0379;
+    --shadow2: #0a4c75;
+} 
+
+/* Aplicado a todos os componentes */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* place-items: center; */
+    font-family: var(--fonte1);
+}
+
+/* Aplicado ao body */
+body {
+    background-color: var(--body-bg);
+    color: var(--body-color);
+    transition: .5s;
+}
+
+.btn {
+    height: 4.5em;
+    width: 100%;
+    background-color: var(--nav-bg);
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 60px 0px 60px;
+    box-shadow: 3px 3px 14px var(--nav-shadow);
+    gap: 22px;
+    align-items: center;
+    color: var(--body-color);
+    transition: .6s;
+}
+
+/* img#logo (manipula a imagem com id "logo" - logo do site) */
+.btn img#imgLogoSrc {
+    position: absolute;
+    width: 125px;
+    height: 120px;
+    top: 15px;
+    left: 60px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--body-color);
+}
+
+/* Div responsável por manter o menu suspenso em uma unica posição. */
+.dropdown_menu {
+    position: relative;
+    display: inline-block;
+    gap: 30px;
+}
+
+.dropdown_menu > .themes:hover {
+    cursor: pointer;
+}
+
+/* Div responsável pelo conteúdo */
+.dropdown_content {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 3px 3px 14px var(--nav-shadow);
+    z-index: 1;
+
+
+    width: 300px;
+    height: 350px;
+    border-radius: 25px;
+    background-color: var(--body-bg);
+    transform: translate(-44.5%,4.8%);
+    padding: 20px;
+    gap: 8px;
+}
+
+/* Botões que representam cada tema */
+.dropdown_content button {
+    color: var(--body-color);
+    padding: 12px 16px;
+    display: block;
+    font-size: 16px;
+    background: transparent;
+    border-radius: 15px;
+    width: 130px;
+}
+
+.dropdown_content button:hover {
+    background-color: var(--body-bg2);
+}
+
+/* Classe que será atribuida quando o menu for ativado */
+.show {
+    display: flex;
+    flex-direction: row;
+}
+
+/* PopUp */
+.popup {
+    visibility: hidden;
+    width: 160px;
+    background-color: var(--body-bg2);
+    color: var(--body-bg3);
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+    bottom: 70%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+.popupshow {
+    visibility: visible;
+}
+
+
+/* user-space (contém foto de usuário e suas informações) */
+.btn > .user-space {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#imagem {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--button-color);
+    border: 3.5px solid var(--body-color);
+}
+
+/* Barra do usuário */
+.btn > .user-space > .sidenav {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background-color: var(--body-bg);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 90px 0px 35px 0px;
+    font-size: 18px;
+    flex-wrap: nowrap;
+}
+
+
+/* p (parágrafo do user-space) */
+.btn > .user-space > #userbar > p,
+.btn > .user-space > #userbar > label {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* a (link do user-space) */
+.btn > .user-space > .sidenav > a#closebtn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 35px;
+    color: var(--body-bg);
+    background-color: var(--body-bg3);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ao posicionar o cursor no botão de fechar... */
+.btn > .user-space > .sidenav > a#closebtn:hover {
+    background-color: var(--body-bg4);
+}
+
+/* Ao focar no botão de fechar... */
+.btn > .user-space > .sidenav > a#closebtn:focus {
+    rotate: 100deg;
+    transition: .3s;
+}
+
+/* Manipula o perfil da side bar (foto de usuário, nome) */
+.btn > .user-space > .sidenav > .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    gap: 18px;
+}
+
+/* Manipula a foto do perfil */
+.btn > .user-space > .sidenav > .profile > img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid var(--body-color);
+}
+
+/* Manipula a posição das opções no perfil */
+.btn > .user-space > .sidenav > .options {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 50px 0 50px;
+    gap: 20px;
+    font-size: 17px;
+}
+
+.btn > .user-space > .sidenav > .options > p:hover,
+.btn > .user-space > .sidenav > .options > label:hover {
+    text-decoration: underline;
+}
+
+/* Botão logout na barra lateral */
+.btn > .user-space > .sidenav > button {
+    margin: 0 0 0 50px;
+    left: 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    right: 0;
+    font-size: 15px;
+    bottom: 100px;
+    position: absolute;
+}
+
+
+/* Parágrafo com a versão da página web */
+.btn > .user-space > .sidenav > .version {
+    position: absolute;
+    bottom: 20px;
+    font-size: 11px;
+    right: 35%;
+    color: var(--copyright-color);
+}
+
+.mascara{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.isclose{
+    display: none;
+}
+
+/*Imagem de perfil e derivados:*/
+#arquive  {
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+}
+
+/* Aplicado para todos os botões */
+button {
+    padding: 0;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: var(--body-color);
+}
+
+/* Quando o cursor passar por cima, mudará para "pointer" */
+button:hover {
+    cursor: pointer;
+}
+
+/* Main */
+
+main {
+    margin: 50px 0px 50px 0px;
+}
+
+/* Alinha no lado direito da página */
+.wrapper {
+    width: 97vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+/* Container do título da página */
+.title {
+ /* margin: top right bottom left */
+    margin: 3% 10% 2% 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+}
+
+/* h1 do container */
+.title > h1 {
+    font-size: 42px;
+}
+
+/* Largura e espaçamento dos itens */
+.title > .search-bar-wrapper > .search-bar {
+    min-width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: var(--card-color2);
+}
+
+/* Estiliza o input de texto */
+.title > .search-bar-wrapper > .search-bar > input {
+    width: 50px;
+    outline: none;
+    background: transparent;
+    border: none;
+    color: var(--body-bg);
+    font-size: 15px;
+    padding-left: 50px;
+    transition: width .3s ease-in-out;
+}
+
+/* Muda a cor do placeholder */
+.title > .search-bar-wrapper> .search-bar > input::placeholder {
+    color: var(--body-bg);
+    opacity: .68;
+}
+
+/* Quando estiver focado no input */
+.title > .search-bar-wrapper > .search-bar > input:focus {
+    width: 380px;
+}
+
+.title > .search-bar-wrapper > .search-bar > label {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--card-color2);
+}
+
+/* Centraliza o ícone de pesquisa no botão */
+.title > .search-bar-wrapper > .search-bar > label > button > img {
+    display: flex;
+}
+
+/* Centraliza a linha */
+.line-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 60px 0;
+}
+
+/* Linha divisória */
+.line {
+    width: 1182px;
+    height: 5px;
+    background-color: var(--body-color);
+    border-radius: 4px;
+    opacity: .60;
+}
+
+/* Títulos das seções de gênero */  
+.gender {
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+/* Cards */
+.container {
+    width: 99vw;
+    height: 35vw;
+    display: flex;
+    align-items: flex-start;
+	justify-content: center;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+
+.flip-card {
+    width: 350px;
+    height: 450px;
+    padding: 10px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    perspective: 1000px;
+    gap: 10%;
+    flex-wrap: wrap;
+    background-color: transparent;
+}
+
+.flip-card-inner{
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner{
+    transform: rotateY(-180deg);
+}
+
+.flip-card .card_back{
+    transform: rotateY(-180deg);
+}
+
+.flip-card-images{
+    width: 100%;
+    height: 100%;
+    min-height: 430px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.card_front, .card_back{
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.background {
+    width: 350px;
+    height: 450px;
+    background-color: var(--nav-bg);
+    border-radius: 30px;
+}
+
+/* Conteúdo do verso do card */
+.background > .content {
+    width: 350px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px;
+}
+
+/* Texto do verso do card */
+.background > .content > .text {
+    font-size: 15px;
+    text-align: justify;
+    color: var(--body-color);
+}
+
+/* Título do verso do card */
+.background > .content > .text h2 {
+    text-align: center;
+    margin: 10px 0 12px 0;
+}
+
+/* Personaliza o botão "ler mais" no verso do card */
+.background > .content > .read-more-btn {
+    border-radius: 30px;
+    color: var(--body-color);
+    background-color: var(--nav-bg);
+    font-weight: bold;
+    /* text-decoration: underline; */
+    padding: 6px 16px 6px 16px;
+    margin-bottom: 8px;
+    transition: .2s;
+}
+
+/* Ao posicionar o cursor em cima do botão há a mudança de cor com transição */
+.background > .content > .read-more-btn:hover {
+    background-color: var(--shadow2);
+    color: var(--body-bg2);
+    transition: .2s;
+}
+
+/* A partir daqui são as histórias completas dos cards */
+
+/* Container dos cards */
+.container2 {
+    background-color: rgba(38, 38, 38, 0.578);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    /* "Display: none" não permite a visualização até que a classe 'openStory' seja
+    atribuída ao container2 */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Quando a 'openStory' for atribuída ao 'container2', o "display: flex;" permite
+a visualização da classe */
+.container2.openStory {
+    display: flex;
+}
+
+/* Conteúdo do card de história expandido */
+.container2 > .content2 {
+    width: 750px;
+    min-width: 580px;
+    height: 650px;
+    background-color: var(--nav-bg);
+    color: var(--body-color);
+    border-radius: 35px;
+    padding:  46px 65px 65px 65px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*  Deixa a classe invisível com o "display: none;" */
+.content2.openStory {
+    display: flex;
+}
+
+/* Manipula as propriedades do botão que fecha a história */
+.container2 > .content2 > .close-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 22.5px;
+    font-weight: bold;
+    transition: .3s;
+    position: absolute;
+    top: 100px;
+    right: 420px;
+}
+
+.container2 > .content2 > .close-btn:hover {
+    background-color: var(--icon-bg);
+    transition: .3s;
+}
+
+/* div para a barra de rolagem */
+.container2 > .content2 > .scrollbar {
+    width:  640px;
+    overflow-y: scroll;
+}
+
+/* Transparência na barra de rolagem */
+.container2 > .content2 > .scrollbar::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+/* Justifica o texto */
+.container2 > .content2 > .scrollbar > .text2 {
+    text-align: justify;
+    padding: 0 10px 0 20px;
+}
+
+/* 
+Espaçamento entre os parágrafos porque o 'gap' não serviu 
+no .text2 ¯\_(ツ)_/¯
+*/
+.container2 > .content2 > .scrollbar > .text2 > p {
+    margin: 10px 0 10px 0;
+}
+
+/* Marcações no texto */
+span {
+    background-color: var(--span-bg);
+    border-radius: 5px;
+    transition: .3s;
+}
+
+/* Barra de rolagem transparente */
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 7px;
+    border-radius: 20px;
+    background-color: #00000041;
+}
+
+/* Thumb da barra de rolagem com cor e arredondado */
+::-webkit-scrollbar-thumb {
+    background-color: var(--body-color);
+    border-radius: 20px;
+}
+
+/* Título do card com história completa */
+.container2 > .content2 > h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+
+/* Barra inferior com notas sobre o projeto */
+.notes {
+    height: 7em;
+    width: 100%;
+    background-image: linear-gradient(90deg, var(--nav-bg), var(--body-bg2));
+    padding: 0px 60px 0px 60px;
+    box-shadow: 3px 3px 20px var(--shadow2);
+    gap: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--body-color);
+    gap: 6px;
+    text-align: center;
+    margin-top: 4%;
+}
+
+/* Description (descrição das notas) */
+.notes > .description {
+    font-size: 14px;
+}
+
+/* Copyright */
+.notes > .description > .copyright {
+    font-size: 13px;
+    color: var(--copyright-color);
+}
